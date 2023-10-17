@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  //主色
+  --rm-primary-color: #1b65b9;
+  //success
+  --rm-success-color: #67c23a;
+  //warning
+  --rm-warning-color: #e6a23c;
+  //danger
+  --rm-danger-color: #f56c6c;
+  //info
+  --rm-info-color: #909399;
+  //渐变
+  --rm-gradient-color: linear-gradient(0deg, #3ca0f6 0%, #3b71e8 100%);
+  //辅助色
+  --rm-secondary-color: #3ca0f6;
+  //文字颜色
+  --rm-text-color: #333;
+  --rm-text-color-light: #606266;
+  --rm-text-color-lighter: #909399;
+  --rm-text-color-lightest: #c0c4cc;
+  //背景色
+  --rm-bg-color: #f0f2f5;
+  --rm-bg-color-light: #f5f7fa;
+  //边框色
+  --rm-border-color: #dcdfe6;
+  --rm-border-color-light: #cecece;
+  --rm-border-color-lighter: #ebeef5;
+  --rm-border-color-lightest: #f2f6fc;
+  --rm-base-radius: 2px;
+  //字体大小
+  --rm-font-size-h1: 18px;
+  --rm-font-size-h2: 16px;
+  --rm-font-size-h3: 14px;
+  --rm-font-size-h4: 12px;
+  --rm-font-size-base: 14px;
+  --rm-font-size-sm: 13px;
+  --rm-font-size-xs: 12px;
+
+  //layout
+  --rm-layout-header-height: 60px;
+  --rm-layout-sider-width: 200px;
+  --rm-layout-sider-collapsed-width: 80px;
+  --rm-header-bg-color: #fff;
+  --rm-layout-sider-bg-color: #fff;
+}
+// //滚动条样式设置
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 4px;
+//   background-color: #cecece;
+//   &:hover {
+//     background-color: #b6b7b9;
+//   }
+// }
+// ::-webkit-scrollbar-track {
+//   border-radius: 4px;
+//   background-color: transparent;
+// }
+// ::-webkit-scrollbar-corner {
+//   background-color: transparent;
+// }
+// ::-webkit-scrollbar-button {
+//   width: 0;
+//   height: 0;
+//   display: none;
+// }
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial";
+  font-size: var(--rm-font-size-base);
+  color: var(--rm-text-color);
+  background-color: var(--rm-bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+//fade-transform
+.fade-transform-enter-active,
+.fade-transform-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.fade-transform-enter,
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.rm-page {
+  padding: 20px;
+  width: 100%;
+  flex: 1;
+  min-height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  .list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
